@@ -28,14 +28,17 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
   for (i = 1; i < 6; i++) {
+    // Player selection
     let playerSelection = prompt(
       "Choose one: paper,rock or scissors"
     ).toLowerCase();
     console.log(`Player choose: ${playerSelection}`);
 
+    // Computer selection
     let computerSelection = computerPlay();
     console.log(`Computer choose: ${computerSelection}`);
 
+    // Prints out the result of the round
     let result = playRound(playerSelection, computerSelection);
 
     if (result === 1) {
@@ -50,6 +53,8 @@ function game() {
     console.log(" ");
   }
   console.log(" ");
+
+  // Prints out the score of the whole game
   if (playerScore > compScore) {
     console.log(
       `You win this game!\nYour score is: ${playerScore}\nComputer score is: ${compScore}`
